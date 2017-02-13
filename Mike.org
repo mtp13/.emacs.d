@@ -18,6 +18,7 @@
   (setq mac-command-modifier 'meta)
   (global-set-key (kbd "<f5>") 'revert-buffer)
 #+END_SRC
+
 * Change frame name of emacs
 #+BEGIN_SRC emacs-lisp
 (setq frame-title-format
@@ -133,7 +134,6 @@
     )
 #+END_SRC
 
-
 * smartparens
 #+BEGIN_SRC emacs-lisp
   (use-package smartparens
@@ -147,3 +147,4 @@
     (show-smartparens-global-mode t)
     )
 #+END_SRC
+
