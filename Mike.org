@@ -1,3 +1,4 @@
+
 * visual tweaks
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
@@ -6,8 +7,9 @@
   (delete-selection-mode t)
   (transient-mark-mode t)
   (setq tab-width 4)
+  (setq indent-tabs-mode nil)
   (fset 'yes-or-no-p 'y-or-n-p)
-;  (show-paren-mode 1)
+                                          ;  (show-paren-mode 1)
 #+END_SRC
 
 * keyboard tweaks
@@ -68,7 +70,7 @@
     :ensure t
     :config (load-theme 'leuven t))
 
-    (set-default-font "Consolas 16")
+    (set-default-font "Source Code Pro 15")
 #+END_SRC
 
 * ivy/counsel/swiper
@@ -141,9 +143,13 @@
     )
 #+END_SRC
 
-
 * ibuffer
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x C-b") 'ibuffer)
   (autoload 'ibuffer "ibuffer" "List buffers." t)
 #+end_SRC
+
+* python
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC
