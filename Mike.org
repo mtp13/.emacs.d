@@ -86,7 +86,7 @@
   (use-package ivy
     :ensure t
     :diminish (ivy-mode)
-    :bind 
+    :bind
     ("C-x b"    .       ivy-switch-buffer)
     ("C-c C-r"  .       ivy-resume)
     :config
@@ -142,7 +142,7 @@
   (use-package smartparens
     :ensure t
     :diminish (smartparens-mode)
-    :config 
+    :config
     (require 'smartparens-html)
     (require 'smartparens-python)
     (require 'smartparens-ruby)
@@ -160,14 +160,16 @@
 * python
 #+BEGIN_SRC emacs-lisp
   (setq python-shell-interpreter "/usr/local/bin/python")
-  (if (string-equal "darwin" (symbol-name system-type))
-      (setenv "PATH" (concat "/usr/local/bin:/User/mtp/bin:/usr/local/lib/python2.7/site-packages:"
-                             (getenv "PATH"))))
+  (add-hook 'python-mode-hook
+            (lambda ()
+              (setq-default indent-tabs-mode nil)
+              (setq-default tab-width 4)
+              (setq python-indent-offset 4)
+              (setq-default py-indent-tabs-mode nil)
+              (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
   (use-package elpy
     :ensure t
     :config
     (elpy-enable)
     )
 #+END_SRC
-
-
