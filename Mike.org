@@ -151,5 +151,10 @@
 
 * python
 #+BEGIN_SRC emacs-lisp
-(setq python-shell-interpreter "/usr/local/bin/python")
+  (setq python-shell-interpreter "/usr/local/bin/python")
+  (use-package elpy
+    :ensure t
+    :config
+    (elpy-enable)
+    )
 #+END_SRC
