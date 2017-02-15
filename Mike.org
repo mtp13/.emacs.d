@@ -1,4 +1,12 @@
 
+* environment setup
+#+BEGIN_SRC emacs-lisp
+  (use-package exec-path-from-shell
+    :ensure t
+    :config
+    (exec-path-from-shell-copy-env "PYTHONPATH")
+    (exec-path-from-shell-initialize))
+#+END_SRC
 * visual tweaks
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
@@ -152,9 +160,14 @@
 * python
 #+BEGIN_SRC emacs-lisp
   (setq python-shell-interpreter "/usr/local/bin/python")
+  (if (string-equal "darwin" (symbol-name system-type))
+      (setenv "PATH" (concat "/usr/local/bin:/User/mtp/bin:/usr/local/lib/python2.7/site-packages:"
+                             (getenv "PATH"))))
   (use-package elpy
     :ensure t
     :config
     (elpy-enable)
     )
 #+END_SRC
+
+

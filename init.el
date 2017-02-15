@@ -19,7 +19,7 @@
     ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(package-selected-packages
    (quote
-    (python elpy smartparens smart-mode-line-powerline-theme smart-mode-line))))
+    (exec-path-from-shell python elpy smartparens smart-mode-line-powerline-theme smart-mode-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
