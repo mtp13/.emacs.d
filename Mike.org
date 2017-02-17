@@ -53,14 +53,6 @@
     )
 #+END_SRC
 
-* org-mode
-#+BEGIN_SRC emacs-lisp
-  (use-package org-bullets
-    :ensure t
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-#+END_SRC
-
 * ace-window
 #+BEGIN_SRC emacs-lisp
   (use-package ace-window
