@@ -1,5 +1,3 @@
-
-
 * environment setup
 #+BEGIN_SRC emacs-lisp
   (use-package exec-path-from-shell
@@ -68,9 +66,12 @@
 
 * themes
 #+BEGIN_SRC emacs-lisp
-  (use-package leuven-theme
+  ;; (use-package leuven-theme
+  ;;   :ensure t
+  ;;   :config (load-theme 'leuven t))
+  (use-package zenburn-theme
     :ensure t
-    :config (load-theme 'leuven t))
+    :config (load-theme 'zenburn t))
 
     (set-default-font "Source Code Pro 15")
 #+END_SRC
@@ -169,40 +170,34 @@
 #+END_SRC
 * Misc packages
 #+BEGIN_SRC emacs-lisp
-    (global-hl-line-mode t)
+  (global-hl-line-mode t)
 
-    (use-package beacon
-      :ensure t
-      :config
-      (beacon-mode 1)
-      )
+  (use-package hungry-delete
+    :ensure t
+    :config
+    (global-hungry-delete-mode)
+    )
 
-    (use-package hungry-delete
-      :ensure t
-      :config
-      (global-hungry-delete-mode)
-      )
+  (use-package iedit
+    :ensure t)
 
-    (use-package iedit
-      :ensure t)
+  (use-package expand-region
+    :ensure t
+    :config
+    (global-set-key (kbd "C-=") 'er/expand-region)
+    )
 
-    (use-package expand-region
-      :ensure t
-      :config
-      (global-set-key (kbd "C-=") 'er/expand-region)
-      )
+  (use-package google-this
+    :ensure t
+    :diminish google-this-mode
+    :config
+    (google-this-mode 1)
+    )
 
-    (use-package google-this
-      :ensure t
-      :diminish google-this-mode
-      :config
-      (google-this-mode 1)
-      )
-
-    (use-package smart-mode-line
-      :ensure t
-      :config
-      (setq sml/theme 'light)
-      (sml/setup)
-      )
+  (use-package smart-mode-line
+    :ensure t
+    :config
+    (setq sml/theme 'light)
+    (sml/setup)
+    )
 #+END_SRC
