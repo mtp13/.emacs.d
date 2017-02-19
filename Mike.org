@@ -69,9 +69,12 @@
   ;; (use-package leuven-theme
   ;;   :ensure t
   ;;   :config (load-theme 'leuven t))
-  (use-package zenburn-theme
+  ;; (use-package zenburn-theme
+  ;;   :ensure t
+  ;;  :config (load-theme 'zenburn t))
+  (use-package ample-theme
     :ensure t
-    :config (load-theme 'zenburn t))
+    :config (load-theme 'ample t))
 
     (set-default-font "Source Code Pro 15")
 #+END_SRC
